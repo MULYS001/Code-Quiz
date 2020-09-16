@@ -25,7 +25,7 @@ var questions = [
 
   {
     title: "What is the correct syntax for referring to an external script called 'xxx.js'?",
-    choices: ["<script href='xxx.js'", "<script src='xxx.js'", "<script name='xxx.js'", "<script alt='xxx.js'"];
+    choices: ["<script href='xxx.js'", "<script src='xxx.js'", "<script name='xxx.js'", "<script alt='xxx.js'"],
     answer: "<script src='xxx.js'"
   },
 
