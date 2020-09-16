@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Verdana, Arial, Tahoma, Serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+.container-sm {
+  margin: 10px;
+  width: auto;
+  }
+
+.btn-grid {
+  display: flex;
+  margin: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  gap: 10px;
+  box-shadow: 0 0 10px;
+  display: grid;
+  width: auto;
+}
+
+.btn {
+  background-color: mediumaquamarine;
+  text-align: left;
+}
+
+.btn.correct {
+  background-color: green;
+}
+
+.btn.incorrect {
+  background-color: rgb(255, 60, 0);
+}
+
+.start-btn {
+  margin: 20px 10px;
+  }
+@media (max-width: 575) {
+  .btn-grid {
+    font-size: smaller;
+    width: auto;
+  };
+  .home {
+    font-size: smaller;
+    width: auto;
+  }
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: rosybrown;
+}
