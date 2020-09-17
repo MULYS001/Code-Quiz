@@ -41,3 +41,4 @@ var questions = [
     answer: "alert('Hello World')"
   }
 ]
+// export {questions}
