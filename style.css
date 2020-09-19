@@ -7,7 +7,7 @@
 
 body {
   padding: 10px;
-  /* justify-content: center; */
+  justify-content: center; 
   height: 100%;
   width: 100%;
   align-items: center;
@@ -37,7 +37,7 @@ body {
   margin-bottom: 20px; 
 }
 
-#answer.btn-grid {
+btn-grid {
   margin: 20px;
   border-radius: 5px;
   padding: 10px;
