@@ -24,7 +24,7 @@ WHEN the game is over my score is the amount on timer + penalty time
 THEN I can save my initials and score
 
 ```
-## My Quiz:  
+## My Quiz:  https://mulys001.github.io/Code-Quiz/
 
 My quiz was developed using Javascript & JQuery.  I applied Bootstrap elements for styling as well as what I put in my style.css.
 
@@ -35,3 +35,14 @@ I was able to generate the different sections of the quiz and the answer selecti
 I am not fully satisfied with my efforts as I did not end up building the capability to retrieve scores nor a 'Play Again' button as I orginally hoped to do.
 
 This is something I'd like to revisit as my skills improve.
+
+## Screenshots of my quiz:
+
+### Main Page
+![Main page](assets/main-page.jpg)
+
+### Questions Page (example)
+![Questions](assets/questions-page.jpg)
+
+### Results Page
+![Results page](assets/final-page.jpg)
