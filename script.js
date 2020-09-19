@@ -53,6 +53,7 @@ function setStorage() {
 $("#save").click(function (event) {
   event.preventDefault();
   localStorage.setItem("scoreName", document.getElementById("userName").value);
+  localStorage.setItem("score", counter);
 })
 }
 
