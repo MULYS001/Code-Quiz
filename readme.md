@@ -26,7 +26,7 @@ THEN I can save my initials and score
 ```
 ## My Quiz:  https://mulys001.github.io/Code-Quiz/
 
-My quiz was developed using Javascript & JQuery.  I applied Bootstrap elements for styling as well as what I put in my style.css.
+My quiz was developed using Javascript & JQuery.  I applied Bootstrap elements for styling as well as what I put in my style.css.  I applied a hover element so the user can see which answer option they are hovering over prior to clicking.
 
 Quiz Questions were mainly sourced from W3Schools: https://www.w3schools.com/quiztest/quiztest.asp?qtest=JS.  I did put my own twist on some of the questions.
 
