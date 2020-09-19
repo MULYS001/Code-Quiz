@@ -6,79 +6,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Code Quiz </title>
+
   <!-- linking bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
   <!-- linking stylesheet -->
   <link rel="stylesheet" href="./style.css">
-
-  <!-- Linking Bootstrap Javascript -->
-  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
-
 </head>
 
 <body>
-  <div class="container-sm">
-
-
-    <!-- Header Navbar -->
+  <!-- Header Navbar -->
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-12">
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+      <div class="col">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+          <a>Scores</a>
+          <li class="nav-right ml-auto">
+            <a>Timer</a> <a id="count">0</a>
           </li>
-          <li class="nav-right">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-        </ul>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- Main screen -->
 
-        <!-- Main screen -->
-        <div class="home">
-          <h1>Javascript Quiz</h1>
-          <p>Try to answer the following questions about Javascript in 60 seconds</p>
-          <p>Be careful - if you answer incorrectly you will lose 10 seconds!</p>
-          <button id="start-btn" class="start-btn btn">Start Quiz</button>
+  <div class="row">
+    <div class="col">
+      <div id="home">
+        <h1>Javascript Quiz</h1>
+        <p>Try to answer the following questions about Javascript within the shortest timeframe. Aim for the lowest
+          time to win!</p>
+        <p>Be careful - if you answer incorrectly you add 10 seconds to your score!</p>
+        <button id="start-btn" class="start-btn btn">Start Quiz</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Questions Screen -->
+  <div id="questions">
+    <div class="row">
+      <div class="wrapper">
+        <div class="col">
+          <p id="question">QuestionText</p>
+          <ul id="answer" class="btn-grid">
+            <li data-index='0' id="ans-a" class="btn">Answer A</li>
+            <li data-index='1' id="ans-b" class="btn">Answer B</li>
+            <li data-index='2' id="ans-c" class="btn">Answer C</li>
+            <li data-index='3' id="ans-d" class="btn">Answer D</li>
+          </ul>
+          <div id="response"></div>
         </div>
-
-        <!-- Questions Screen -->
-        <div class="row">
-          <div class="col-9">
-            <div class="controls">
-              <h3 id="question">QuestionText</h3>
-              <ul id="answer" class="btn-grid">
-                <!-- <li class="btn">Answer 1</li>
-            <li class="btn">Answer 2</li>
-            <li class="btn">Answer 3</li>
-            <li class="btn">Answer 4</li> -->
-              </ul>
-              <div id="response"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Results Screen -->
-        <div class="row">
-          <div class="col-9">
-            <div class="scores">
-              <h3>You've Finished!</h3>
-              <p id="final-score"></p>
-              <form class="form-group">
-                <label for="new-score">Enter your name:</label>
-                <input type="text" id="userName">
-                <button type="button" class="btn btn-info btn-sm submitBtn">Submit</button>
-              </form>
-            </div>
+      </div>
+    </div>
+  </div>
+  <!-- Results Screen -->
+  <div id="results">
+    <div class="row">
+      <div class="wrapper">
+        <div class="col">
+          <div class="scores">
+            <h3>You've Finished!</h3>
+            <p>
+              <a> Your Final Score is:</a><a id="final-score"></a>
+            </p>
+            <form class="form-group">
+              <label for="user">Enter your name:</label>
+              <input type="text" id="userName"><span id="user-first-name"></span>
+              <button type="button" id="save" class="btn btn-info btn-sm saveBtn">Save Score</button>
+            </form>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
+  <!-- Linking JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-      <script src="./questions.js"></script>
-      <script src="./script.js"></script>
+  <!-- Linking Bootstrap Javascript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <!-- Linking questions file  -->
+  <script src="./questions.js"></script>
+
+  <!-- Linking functionality  -->
+  <script src="./script.js"></script>
+
 
 </body>
 

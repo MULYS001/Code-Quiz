@@ -4,7 +4,7 @@
 
 ```
 AS A coding bootcamp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
+I WANT to take a timed quiz on JavaScript fundamentals that stores time as scores - the aim is to get the lowest time possible
 SO THAT I can gauge my progress compared to my peers
 ```
 
@@ -17,31 +17,21 @@ THEN a timer starts and I am presented with a question
 WHEN I answer a question
 THEN I am presented with another question
 WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
+THEN penalty time of 10 seconds is added to the clock
+WHEN all questions are answered 
 THEN the game is over
-WHEN the game is over
+WHEN the game is over my score is the amount on timer + penalty time
 THEN I can save my initials and score
+
 ```
+## My Quiz:  
 
-For my reference:
-https://codepen.io/Lyarz/pen/QWNxqGL?editors=1011 //Avi demo on interval timers
-https://www.youtube.com/watch?v=rFWbAj40JrQ&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=2
+My quiz was developed using Javascript & JQuery.  I applied Bootstrap elements for styling as well as what I put in my style.css.
 
-Quiz Questions: https://www.w3schools.com/quiztest/quiztest.asp?qtest=JS 
+Quiz Questions were mainly sourced from W3Schools: https://www.w3schools.com/quiztest/quiztest.asp?qtest=JS.  I did put my own twist on some of the questions.
 
+## Summary of my efforts
+I was able to generate the different sections of the quiz and the answer selections for each question.
+I am not fully satisfied with my efforts as I did not end up building the capability to retrieve scores nor a 'Play Again' button as I orginally hoped to do.
 
-Required:
-Start button
-Questions
-  for each question: indicator of correct or incorrect
-    for incorrect - subtract time from clock
-    for correct - add to score 
-      local storage
-End = all questions answered or timer reaches zero
-  then 
-    display score
-    inputs for initials
-    both submit 
-
-Need starting time, then logic to count down & subtract time from clock
+This is something I'd like to revisit as my skills improve.
