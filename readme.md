@@ -4,7 +4,7 @@
 
 ```
 AS A coding bootcamp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores time as scores - the aim is to get the lowest time possible
+I WANT to take a timed quiz on JavaScript fundamentals that stores time as scores - the aim is to get the lowest score (based on timer + penalties) possible
 SO THAT I can gauge my progress compared to my peers
 ```
 
@@ -30,8 +30,10 @@ My quiz was developed using Javascript & JQuery.  I applied Bootstrap elements f
 
 Quiz Questions were mainly sourced from W3Schools: https://www.w3schools.com/quiztest/quiztest.asp?qtest=JS.  I did put my own twist on some of the questions.
 
-## Summary of my efforts
-I was able to generate the different sections of the quiz and the answer selections for each question.
-I am not fully satisfied with my efforts as I did not end up building the capability to retrieve scores nor a 'Play Again' button as I orginally hoped to do.
+The quiz uses a timing scoring mechanism, with incorrect answers adding + 10 seconds to the timer.  
 
-This is something I'd like to revisit as my skills improve.
+To commence play the user is required to click the 'Start Quiz' button.  This takes the user to the first question, and starts the timer (which is displayed on the right size of header).  User then selects their answer from the choices displayed, once answer is selected the next question is displayed.
+
+After the user has answered all the questions the last page shows their score and prompts for the user to enter their name, so that score can be saved.  User can also play quiz again via the 'Play Again' button
+
+User scores are stored in local storage and can be retrieved via the 'View Scores' button on the header.

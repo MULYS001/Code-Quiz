@@ -17,91 +17,101 @@
 
 <body>
   <!-- Header Navbar -->
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-light">
-          <a>Scores</a>
-          <li class="nav-right ml-auto">
-            <a>Timer</a> <a id="count">0</a>
-          </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </div>
-  <!-- Main screen -->
-
   <div class="row">
     <div class="col">
-      <div id="home">
-        <h1>Javascript Quiz</h1>
-        <p>Try to answer the following questions about Javascript within the shortest timeframe. Aim for the lowest
-          time to win!</p>
-        <p>Be careful - if you answer incorrectly you add 10 seconds to your score!</p>
-        <button id="start-btn" class="start-btn btn">Start Quiz</button>
-      </div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        <button type="button" class="btn btn-info" id=viewScores href="#">View Scores</a></button>
+        <li class="nav-right ml-auto">
+          <a>Timer</a> <a id="count">0</a>
+        </li>
+        </ul>
+      </nav>
     </div>
   </div>
 
-
-  <!-- Questions Screen -->
-  <div id="questions">
-    <div class="row">
-      <div class="wrapper">
+  <div class="container-fluid">
+    <div class="wrapper">
+      <!-- Main screen -->
+      <div class="row">
         <div class="col">
-          <p id="question">QuestionText</p>
-          <ul id="answer" class="btn-grid">
-            <li data-index='0' id="ans-a" class="btn">Answer A</li>
-            <li data-index='1' id="ans-b" class="btn">Answer B</li>
-            <li data-index='2' id="ans-c" class="btn">Answer C</li>
-            <li data-index='3' id="ans-d" class="btn">Answer D</li>
-          </ul>
-          <div id="response"></div>
+          <div id="home">
+            <h1>Javascript Quiz</h1>
+            <p> Try to answer the following questions about Javascript within the <strong>shortest timeframe</strong></p>
+            <p> Aim for the lowest score (time) to win!</p>
+            <p>Be careful - if you answer incorrectly you <strong>add</strong> 10 seconds to your score!</p>
+            <button id="start-btn" class="start-btn btn">Start Quiz</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Results Screen -->
-  <div id="results">
-    <div class="row">
+
+    <!-- Questions Screen -->
+    <div id="questions">
       <div class="wrapper">
-        <div class="col">
-          <div class="scores">
+        <div class="row">
+          <div class="col">
+            <p id="question">QuestionText</p>
+            <ul id="answer" class="btn-grid">
+              <li data-index='0' id="ans-a" class="btn">Answer A</li>
+              <li data-index='1' id="ans-b" class="btn">Answer B</li>
+              <li data-index='2' id="ans-c" class="btn">Answer C</li>
+              <li data-index='3' id="ans-d" class="btn">Answer D</li>
+            </ul>
+            <div id="response"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Results Screen -->
+    <div id="results">
+      <div class="wrapper">
+        <div class="row">
+          <div class="col">
             <h3>You've Finished!</h3>
             <p>
-              <a> Your Final Score is:</a><a id="final-score"></a>
+              <a> Your Final Score is: </a><a id="final-score"></a>
             </p>
             <form class="form-group">
               <label for="user">Enter your name:</label>
-              <input type="text" id="userName"><span id="user-first-name"></span>
+              <input type="text" id="userName"> </input>
               <button type="button" id="save" class="btn btn-info btn-sm saveBtn">Save Score</button>
+              <button type="button" id="play-btn" class="btn btn-info btn-sm playBtn">Play Again</button>
             </form>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Linking JQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- List Scores Screen -->
+    <div id="listScores">
+      <div class="wrapper">
+        <div class="row">
+          <div class="col">
+            <h3>Your Scores Are:</h3>
+            <div id="scoresList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Linking JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <!-- Linking Bootstrap Javascript -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-    crossorigin="anonymous"></script>
+    <!-- Linking Bootstrap Javascript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"></script>
 
-  <!-- Linking questions file  -->
-  <script src="./questions.js"></script>
+    <!-- Linking questions file  -->
+    <script src="./questions.js"></script>
 
-  <!-- Linking functionality  -->
-  <script src="./script.js"></script>
+    <!-- Linking functionality  -->
+    <script src="./script.js"></script>
 
 
 </body>
