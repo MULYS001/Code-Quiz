@@ -64,6 +64,13 @@ body {
   margin: 20px 10px;
   }
 
+
+table, th, td {
+  padding: 5px 15px;
+  text-align: left;
+  border: 1px solid black; 
+}
+
 @media (max-width: 575) {
   .btn-grid {
     font-size: smaller;
