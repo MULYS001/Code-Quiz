@@ -4,8 +4,8 @@
 
 ```
 AS A coding bootcamp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores time as scores - the aim is to get the lowest score (based on timer + penalties) possible for the quiz.
-
+I WANT to take a timed quiz on JavaScript fundamentals that stores time as scores 
+I WANT to get the lowest score (based on timer + penalties) possible for the quiz.
 SO THAT I can gauge my progress compared to my peers
 ```
 
