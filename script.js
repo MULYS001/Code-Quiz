@@ -27,6 +27,7 @@ $(document).ready(function () {
     }, 1000);
   }
 
+  // function to render the question and respecitve answer choices
   function renderQuestion() {
     var currentQuestion = questions[questionIndex];
     $("#question").text(currentQuestion.title);
@@ -88,7 +89,7 @@ $(document).ready(function () {
       retrievedScore = JSON.parse(localStorage.getItem("scores", scoresList));
       console.log(retrievedScore)
       for (var i = 0; i < retrievedScore.length; i++) {
-        $("#scoresList").append("<li>" + retrievedScore[i] + "</li>");
+        $("#scoresList").append("<li>" + ("Name & Score: ") + retrievedScore[i].scoreName + (" - ") + retrievedScore[i].scores);
       }
     })
   }
